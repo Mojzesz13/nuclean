@@ -1,0 +1,126 @@
+@import 'src/scss/settings/colors';
+
+@mixin desktopTwo() {
+  @media (max-width: 1650px) {
+    @content;
+  }
+}
+
+@mixin desktopThree() {
+  @media (max-width: 1450px) {
+    @content;
+  }
+}
+
+@mixin tabletMax() {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin tabletMin() {
+  @media (max-width: 921px) {
+    @content;
+  }
+}
+@mixin mobile() {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin mobileMin() {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin animationAppearing($time) {
+  animation: appearng $time forwards;
+  @keyframes appearng {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin animationDisappearing($time) {
+  animation: disappearing $time forwards;
+  @keyframes disappearing {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+@mixin letterMove(
+  $time,
+  $startPosition,
+  $endPosition,
+  $startCondition,
+  $endCondition
+) {
+  animation: move $time forwards;
+  @keyframes move {
+    0% {
+      bottom: $startPosition;
+      opacity: $startCondition;
+    }
+    50% {
+      opacity: $endCondition;
+    }
+    100% {
+      bottom: $endPosition;
+      opacity: $endCondition;
+    }
+  }
+}
+
+@mixin gradientBlack() {
+  background: linear-gradient(
+    180deg,
+    rgba(3, 2, 20, 0) 1%,
+    rgba(0, 0, 0, 0.5046393557422969) 60%,
+    rgba(255, 255, 255, 0) 95%
+  );
+}
+
+@mixin goldHover() {
+  text-decoration: none;
+  background: linear-gradient(
+    to bottom,
+    #cfc09f 22%,
+    #634f2c 24%,
+    #cfc09f 26%,
+    #cfc09f 27%,
+    #ffecb3 40%,
+    #3a2c0f 78%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  &:after {
+    background: none;
+    content: attr(data-heading);
+    left: 0;
+    top: 0;
+    z-index: -1;
+    text-decoration: none;
+    position: absolute;
+    text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f,
+      5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+  }
+}
