@@ -3,11 +3,13 @@ import TiltPhaseSix from './logo2';
 import watherBg from '../../assets/wather.jpg';
 import logo from '../../assets/logo.svg';
 import './Logo.scss';
+
 const options = {
   max: 10,
   perspective: 1000,
   scale: 1.05,
 };
+
 class Logo extends Component {
   render() {
     return (
@@ -18,18 +20,21 @@ class Logo extends Component {
           justifyContent: 'center',
           alignItems: 'center',
           position: 'absolute',
-          top: '25%',
-          left: '25%',
-          zIndex: 2,
+          top: '0',
+          left: '0',
+          overflow: 'hidden',
+          height: '95vh',
+          width: '95vw',
+          zIndex: 1,
         }}
       >
         <TiltPhaseSix
           options={{}}
           style={{
-            background: `url(${watherBg}) no-repeat fixed center`,
+            background: `transparent`,
             backgroundSize: 'fit',
-            height: 500,
-            width: 740,
+            height: '100%',
+            width: '100%',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
