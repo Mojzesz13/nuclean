@@ -6,7 +6,7 @@ import Logo from '../Logo/Logo';
 const Navbar = () => {
   return (
     <div className='navbar-container '>
-      <div className='test'>
+      <div className='logo-holder'>
         <Logo />
       </div>
       <div className='row-container first'>

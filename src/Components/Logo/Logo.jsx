@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TiltPhaseSix from './logo2';
-import watherBg from '../../assets/wather.jpg';
 import logo from '../../assets/logo.svg';
 import './Logo.scss';
 

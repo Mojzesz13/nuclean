@@ -1,0 +1,21 @@
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('../../assets/Bg.jpg');
+  background-size: cover;
+}
+
+.background .water {
+  position: absolute;
+  background-image: url('../../assets/Bg.jpg');
+  background-size: cover;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  filter: url('#turbulence');
+  z-index: 1;
+}

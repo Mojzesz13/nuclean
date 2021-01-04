@@ -3,18 +3,14 @@
   height: 100%;
   width: 100%;
   transform: 1s;
-  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 1000;
   position: absolute;
   overflow: hidden;
-
-  .test {
+  .logo-holder {
     position: absolute;
   }
-
   .row-container {
     width: 100%;
     height: 40%;
@@ -43,8 +39,6 @@
     }
   }
   .column-container:hover {
-    width: 120%;
-    height: 120%;
     transition: 1s;
     flex: 2;
     z-index: 2;
@@ -53,10 +47,12 @@
       transition: 1s;
     }
   }
-
   .first,
   .second:hover {
     flex: 2;
     transition: 1s;
+  }
+  .first:hover {
+    padding-bottom: 10%;
   }
 }
